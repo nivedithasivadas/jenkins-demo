@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cosmic Explorer | Discover the Universe</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            background: #080b1a;
+            color: white;
+            overflow-x: hidden;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 25px 8%;
+            background: rgba(12, 16, 38, 0.9);
+        }
+
+        .logo {
+            font-size: 25px;
+            font-weight: bold;
+            color: #9b8cff;
+        }
+
+        nav a {
+            color: #ddd;
+            text-decoration: none;
+            margin-left: 30px;
+        }
+
+        nav a:hover {
+            color: #9b8cff;
+        }
+
+        .hero {
+            min-height: 520px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 70px 10%;
+            background: radial-gradient(circle at 80% 40%, #33236d, #080b1a 55%);
+        }
+
+        .hero-content {
+            max-width: 550px;
+        }
+
+        .hero h1 {
+            font-size: 55px;
+            line-height: 1.15;
+            margin-bottom: 20px;
+        }
+
+        .hero h1 span {
+            color: #a58cff;
+        }
+
+        .hero p {
+            color: #b8bdd2;
+            font-size: 18px;
+            line-height: 1.7;
+            margin-bottom: 30px;
+        }
+
+        .button {
+            display: inline-block;
+            background: #8065ed;
+            color: white;
+            padding: 14px 28px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .planet {
+            width: 260px;
+            height: 260px;
+            border-radius: 50%;
+            background: radial-gradient(circle at 30% 30%, #f6b8ff, #8b55e9 45%, #24104e 80%);
+            box-shadow: 0 0 80px #8759ef;
+            animation: float 5s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-25px); }
+        }
+
+        .section {
+            padding: 70px 10%;
+            text-align: center;
+        }
+
+        .section h2 {
+            font-size: 35px;
+            margin-bottom: 15px;
+        }
+
+        .section > p {
+            color: #aeb4ca;
+            margin-bottom: 40px;
+        }
+
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 25px;
+        }
+
+        .card {
+            background: #151a33;
+            padding: 30px 20px;
+            border-radius: 18px;
+            border: 1px solid #292e50;
+            transition: 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+            border-color: #9279ff;
+        }
+
+        .card .icon {
+            font-size: 45px;
+            margin-bottom: 15px;
+        }
+
+        .card h3 {
+            color: #b6a5ff;
+            margin-bottom: 12px;
+        }
+
+        .card p {
+            color: #b8bdd2;
+            line-height: 1.6;
+        }
+
+        .fact {
+            background: linear-gradient(120deg, #24184e, #17294a);
+            padding: 50px 10%;
+            text-align: center;
+        }
+
+        .fact h2 {
+            color: #c4b4ff;
+            margin-bottom: 15px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 25px;
+            color: #858ba5;
+            background: #050713;
+        }
+
+        @media(max-width: 700px) {
+            header {
+                flex-direction: column;
+                gap: 20px;
+            }
+
+            nav a {
+                margin: 0 8px;
+            }
+
+            .hero {
+                flex-direction: column;
+                text-align: center;
+                gap: 50px;
+            }
+
+            .hero h1 {
+                font-size: 40px;
+            }
+
+            .planet {
+                width: 190px;
+                height: 190px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <div class="logo">🚀 COSMIC EXPLORER</div>
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#planets">Planets</a>
+        <a href="#facts">Space Facts</a>
+    </nav>
+</header>
+
+<section class="hero" id="home">
+    <div class="hero-content">
+        <h1>Explore Beyond <span>the Stars.</span></h1>
+        <p>
+            Journey through galaxies, discover mysterious planets
+            and uncover the incredible wonders of our universe.
+            Your cosmic adventure starts here.
+        </p>
+        <a href="#planets" class="button">Start Exploring →</a>
+    </div>
+
+    <div class="planet"></div>
+</section>
+
+<section class="section" id="planets">
+    <h2>Our Solar System</h2>
+    <p>Meet some fascinating worlds in our cosmic neighbourhood.</p>
+
+    <div class="cards">
+        <div class="card">
+            <div class="icon">☀️</div>
+            <h3>The Sun</h3>
+            <p>The star at the centre of our solar system. Its light takes about 8 minutes to reach Earth.</p>
+        </div>
+
+        <div class="card">
+            <div class="icon">🔴</div>
+            <h3>Mars</h3>
+            <p>Known as the Red Planet, Mars has enormous volcanoes and evidence of ancient water.</p>
+        </div>
+
+        <div class="card">
+            <div class="icon">🪐</div>
+            <h3>Saturn</h3>
+            <p>Famous for its spectacular rings made mostly of ice and rocky particles.</p>
+        </div>
+
+        <div class="card">
+            <div class="icon">🔵</div>
+            <h3>Neptune</h3>
+            <p>A distant blue giant where winds can reach incredible speeds.</p>
+        </div>
+    </div>
+</section>
+
+<section class="fact" id="facts">
+    <h2>🌌 Did You Know?</h2>
+    <p>
+        There are more stars in the observable universe than
+        grains of sand on all the beaches on Earth.
+    </p>
+</section>
+
+<footer>
+    <p>© 2026 Cosmic Explorer | Keep Looking Up ✨</p>
+</footer>
+
+</body>
+</html>
